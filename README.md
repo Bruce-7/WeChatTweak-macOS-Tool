@@ -5,8 +5,9 @@
 终端执行 `git clone https://github.com/Bruce-7/WeChatTweak-macOS-Tool.git`
 或下载项目zip：[https://codeload.github.com/Bruce-7/WeChatTweak-macOS-Tool/zip/refs/heads/main](https://codeload.github.com/Bruce-7/WeChatTweak-macOS-Tool/zip/refs/heads/main)
 
-在WeChatPatch当前目录下双击 install 执行安装。
-在WeChatPatch当前目录下双击 uninstall 执行卸载。
+在`WeChatPatch`当前目录下双击`install`执行安装。
+
+在`WeChatPatch`当前目录下双击`uninstall`执行卸载。
 
 如果提示安全问题请：设置-安全性与隐私-通用-任何来源，如果有提示就点击【仍要打开】。
 
