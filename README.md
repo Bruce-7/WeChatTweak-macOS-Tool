@@ -2,15 +2,16 @@
 很多人不会使用作者提供的安装方式或遇见各种问题，固对WeChatTweak-macOS工程构建的framework提供另一种安装、卸载方式，仅供学习和研究。
 
 ## 安装/卸载插件补丁说明：
-安全说明：
-当前目录下双击执行 install 安装。
-当前目录下双击执行 uninstall 卸载。
+终端执行 `git clone https://github.com/Bruce-7/WeChatTweak-macOS-Tool.git`
+或下载项目zip：[https://codeload.github.com/Bruce-7/WeChatTweak-macOS-Tool/zip/refs/heads/main](https://codeload.github.com/Bruce-7/WeChatTweak-macOS-Tool/zip/refs/heads/main)
+
+在WeChatPatch当前目录下双击 install 执行安装。
+在WeChatPatch当前目录下双击 uninstall 执行卸载。
 
 如果提示安全问题请：设置-安全性与隐私-通用-任何来源，如果有提示就点击【仍要打开】。
 
 ## 更新说明：
-如果作者有更新，自己下载去 https://github.com/Sunnyyoung/WeChatTweak-macOS/releases/ 
-下载 WeChatTweak.framework.zip ，解压后替换 WeChatPatch 目录下的。
+如果作者有更新，自己下载去[https://github.com/Sunnyyoung/WeChatTweak-macOS/releases/](https://github.com/Sunnyyoung/WeChatTweak-macOS/releases/)下载`WeChatTweak.framework.zip`，解压后替换`WeChatPatch`目录下的`WeChatTweak.framework`。
 
 ## 项目地址：
 [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS)
