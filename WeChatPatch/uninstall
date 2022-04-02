@@ -1,0 +1,25 @@
+#!/bin/bash
+
+WeChatPath="/Applications/WeChat.app/Contents/MacOS/WeChat"
+patchFilePath="/Applications/WeChat.app/Contents/Frameworks/WeChatTweak.framework"
+patchPath="${patchFilePath}/WeChatTweak"
+
+currentPath="`dirname ${0}`"
+cd ${currentPath}
+
+if [ -f ${patchPath} ];then
+  echo "插件补丁存在: "
+  echo ${patchPath}
+
+  sudo "./optool" uninstall -p "@rpath/WeChatTweak.framework/WeChatTweak" -t "${WeChatPath}"
+
+  sudo rm -r "${patchFilePath}"
+
+  sudo codesign --force --deep --sign - "/Applications/WeChat.app"
+
+  echo "✅ 已卸载完成"
+  sleep 10
+else
+  echo "⚠️ 不存在的插件补丁"
+  sleep 10
+fi

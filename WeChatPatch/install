@@ -1,0 +1,20 @@
+#!/bin/bash
+
+weChatFrameworks="/Applications/WeChat.app/Contents/Frameworks"
+
+currentPath="`dirname ${0}`"
+cd ${currentPath}
+
+if [ -d "${weChatFrameworks}" ];then
+  sudo cp -R "./WeChatTweak.framework" "${weChatFrameworks}/"
+
+  sudo "./optool" install -c load -p "@rpath/WeChatTweak.framework/WeChatTweak" -t "/Applications/WeChat.app/Contents/MacOS/WeChat"
+
+  sudo codesign --force --deep --sign - "/Applications/WeChat.app"
+
+  echo "✅ 安装插件补丁成功"
+  sleep 10
+else
+  echo "⚠️ 不是指定 /Applications 文件下安装的微信，或者微信未安装！"
+  sleep 10
+fi
